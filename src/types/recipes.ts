@@ -9,5 +9,7 @@ export type Recipe = {
   description: string;
   prepTime: number[];
   bakingTime: number[];
+  totalTime: number[];
   yield: string;
+  image: string;
 };

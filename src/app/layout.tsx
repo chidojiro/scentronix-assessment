@@ -1,11 +1,10 @@
-import Navbar from '@/components/Navbar';
+import Navbar from '@/components/layout/Navbar';
+import ThemeProvider from '@/components/layout/ThemeProvider';
 import { LayoutProps } from '@/types/common';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 
 import './globals.css';
-import ThemeProvider from '@/components/ThemeProvider';
-import { Box } from '@mui/material';
 
 const inter = Inter({ subsets: ['latin'] });
 

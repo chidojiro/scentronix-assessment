@@ -1,6 +1,6 @@
-import PageContent from '@/components/PageContent';
-import SubNavbar from '@/components/SubNavbar';
-import SubNavbarItem from '@/components/SubNavbarItem';
+import PageContent from '@/components/layout/PageContent';
+import SubNavbar from '@/components/layout/SubNavbar';
+import SubNavbarItem from '@/components/layout/SubNavbarItem';
 import { LayoutProps } from '@/types/common';
 
 export default function Layout({ children }: LayoutProps) {

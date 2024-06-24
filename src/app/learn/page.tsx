@@ -1,5 +1,5 @@
-import PageContent from '@/components/PageContent';
-import SubNavbar from '@/components/SubNavbar';
+import PageContent from '@/components/layout/PageContent';
+import SubNavbar from '@/components/layout/SubNavbar';
 import { Box } from '@mui/material';
 
 export default function Page() {
