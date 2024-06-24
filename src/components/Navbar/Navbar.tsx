@@ -19,7 +19,7 @@ const NAVIGATION_ITEMS = [
   },
   {
     label: 'RECIPES',
-    href: ROUTES.RECIPES_CATEGORIES,
+    href: ROUTES.RECIPE_LIST,
   },
   {
     label: 'LEARN',

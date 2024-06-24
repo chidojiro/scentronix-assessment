@@ -1,9 +1,8 @@
 export const ROUTES = {
   ROOT: '/',
   SHOP: '/shop',
-  RECIPES_CATEGORIES: '/recipes/categories',
-  RECIPES_COLLECTIONS: '/recipes/collections',
-  RECIPES_RESOURCES: '/recipes/resources',
+  RECIPE_LIST: '/recipes',
+  RECIPE_DETAILS: '/recipes/:recipeId',
   LEARN: '/learn',
   ABOUT: '/about',
   BLOG: '/blog',

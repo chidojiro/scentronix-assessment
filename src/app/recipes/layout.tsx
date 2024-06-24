@@ -1,16 +1,17 @@
+import PageContent from '@/components/PageContent';
 import SubNavbar from '@/components/SubNavbar';
-import { ROUTES } from '@/constants/route';
+import SubNavbarItem from '@/components/SubNavbarItem';
+import { LayoutProps } from '@/types/common';
 
-export default function Layout() {
+export default function Layout({ children }: LayoutProps) {
   return (
     <>
-      <SubNavbar
-        items={[
-          { label: 'CATEGORIES', href: ROUTES.RECIPES_CATEGORIES },
-          { label: 'COLLECTIONS', href: ROUTES.RECIPES_COLLECTIONS },
-          { label: 'RESOURCES', href: ROUTES.RECIPES_RESOURCES },
-        ]}
-      />
+      <SubNavbar>
+        <SubNavbarItem>Categories</SubNavbarItem>
+        <SubNavbarItem>Collections</SubNavbarItem>
+        <SubNavbarItem>Resources</SubNavbarItem>
+      </SubNavbar>
+      <PageContent>{children}</PageContent>
     </>
   );
 }
