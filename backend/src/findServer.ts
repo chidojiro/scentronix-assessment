@@ -18,7 +18,7 @@ async function findServer() {
 
           clearTimeout(timeout);
 
-          if (response.status.toString().startsWith('2')) return server;
+          if (response.ok) return server;
         } catch {
           return;
         }

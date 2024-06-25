@@ -21,7 +21,17 @@ describe('findServer', () => {
   });
 
   it('should reject when all servers are offline', async () => {
-    mockServer.use(...servers.map((server) => http.get(server.url, () => HttpResponse.error())));
+    mockServer.use(
+      ...servers.map((server) =>
+        http.get(
+          server.url,
+          () =>
+            new HttpResponse(null, {
+              status: 500,
+            }),
+        ),
+      ),
+    );
 
     await expect(findServer()).rejects.toThrow('No servers are online');
   });
