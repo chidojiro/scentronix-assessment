@@ -5,7 +5,7 @@ const TIMEOUT = 5000;
 
 async function findServer() {
   const onlineServers = (
-    await Promise.allSettled(
+    await Promise.all(
       servers.map(async (server) => {
         try {
           const controller = new AbortController();
@@ -24,10 +24,7 @@ async function findServer() {
         }
       }),
     )
-  )
-    .filter((result) => result?.status === 'fulfilled')
-    .map((result) => (result as PromiseFulfilledResult<Server>).value)
-    .filter(Boolean);
+  ).filter(Boolean);
 
   if (onlineServers.length === 0) {
     throw new Error('No servers are online');
